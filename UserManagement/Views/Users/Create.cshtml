@@ -1,0 +1,27 @@
+﻿@model UserManagement.Models.User
+
+<div class="container mt-5">
+    <h1 class="mb-4">Add New User</h1>
+
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" asp-for="Name" class="form-control" placeholder="Enter name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" asp-for="Email" class="form-control" placeholder="Enter email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" asp-for="Phone" class="form-control" placeholder="Enter phone" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add User</button>
+    </form>
+</div>
